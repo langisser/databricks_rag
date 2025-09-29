@@ -1,0 +1,6 @@
+https://docs.databricks.com/aws/en/generative-ai/retrieval-augmented-generation
+https://docs.databricks.com/aws/en/generative-ai/tutorials/ai-cookbook/fundamentals-evaluation-monitoring-rag
+https://docs.databricks.com/aws/en/generative-ai/tutorials/ai-cookbook/evaluate-enable-measurement
+https://docs.databricks.com/aws/en/generative-ai/vector-search
+https://docs.databricks.com/aws/en/generative-ai/tutorials/ai-cookbook/quality-data-pipeline-rag
+https://docs.databricks.com/aws/en/notebooks/source/generative-ai/unstructured-data-pipeline.html
