@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config:*)",
+      "Read(//c/Users/KHACHORNPOPWONGPHAKA/OneDrive - Inteltion Co., Ltd/ClaudeCode02/Project/databricks_helper/**)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(gh:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
