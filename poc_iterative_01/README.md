@@ -1,6 +1,6 @@
 # POC Iterative 01 - RAG Implementation Scripts
 
-This folder contains the working scripts for Phase 1 and Phase 2 implementation of the Databricks RAG Knowledge Base.
+This folder contains the working scripts for Phase 1, Phase 2, and Phase 3 implementation of the Databricks RAG Knowledge Base.
 
 ## Files Overview
 
@@ -19,7 +19,19 @@ This folder contains the working scripts for Phase 1 and Phase 2 implementation 
 - Validates data integrity and table structure
 - **Status**: ✅ Working - Successfully tested
 
+**`phase3_vector_search.py`**
+- Creates vector search endpoint and index
+- Sets up vector search on rag_document_chunks table
+- Uses databricks-gte-large-en embedding model
+- **Status**: ✅ Working - Endpoint and index created
+
 ### Validation and Testing Scripts
+
+**`phase3_validation.py`**
+- Validates vector search endpoint and index status
+- Tests similarity search functionality
+- Confirms integration readiness for AI Playground
+- **Status**: ✅ Working - Vector search validation
 
 **`final_validation.py`**
 - Comprehensive validation of Phase 1 & 2 implementation
@@ -58,9 +70,15 @@ This folder contains the working scripts for Phase 1 and Phase 2 implementation 
    python phase2_data_preparation.py
    ```
 
-4. **Validate Results**
+4. **Execute Phase 3**
+   ```bash
+   python phase3_vector_search.py
+   ```
+
+5. **Validate Results**
    ```bash
    python final_validation.py
+   python phase3_validation.py
    ```
 
 ## Implementation Results
@@ -77,6 +95,12 @@ This folder contains the working scripts for Phase 1 and Phase 2 implementation 
 - ✅ Document chunks created (3 chunks)
 - ✅ Sample query logs and performance metrics
 - ✅ Data integrity validated
+
+### Phase 3 Achievements
+- ✅ Vector search endpoint created (rag-knowledge-base-endpoint)
+- ✅ Vector search index created (sandbox.rdt_knowledge.rag_chunk_index)
+- ✅ Embedding model configured (databricks-gte-large-en)
+- ✅ Vector search operational and ready for queries
 
 ## Current Data Status
 
@@ -100,10 +124,10 @@ Uses namespace: `sandbox.rdt_knowledge`
 
 After successful execution of these scripts:
 
-1. Create vector search endpoint via Databricks UI
-2. Create vector index using rag_document_chunks table
+1. ✅ Vector search endpoint created
+2. ✅ Vector index created using rag_document_chunks table
 3. Configure AI Playground with Agent Bricks
-4. Test end-to-end RAG functionality
+4. Test end-to-end RAG functionality with custom queries
 
 ## Troubleshooting
 
