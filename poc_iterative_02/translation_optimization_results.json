@@ -1,0 +1,83 @@
+{
+  "bilingual_index": "sandbox.rdt_knowledge.bilingual_translation_index_v1759213209",
+  "translation_mappings": {
+    "ตาราง": "table",
+    "คอลัมน์": "column",
+    "โครงสร้าง": "structure",
+    "ข้อมูล": "data",
+    "ฐานข้อมูล": "database",
+    "รหัส": "ID",
+    "วันที่": "date",
+    "เวลา": "time",
+    "สถานะ": "status",
+    "ข้อความ": "message",
+    "ผู้สร้าง": "creator",
+    "ผู้ใช้": "user",
+    "ธนาคารแห่งประเทศไทย": "Bank of Thailand",
+    "ธปท": "BOT",
+    "การส่งข้อมูล": "data submission",
+    "การตอบสนอง": "response",
+    "การตรวจสอบ": "validation",
+    "คู่ค้า": "counterparty",
+    "ระบบ": "system",
+    "กระบวนการ": "process",
+    "เฟรมเวิร์ค": "framework",
+    "การซิงค์": "synchronization",
+    "การแปลง": "transformation",
+    "คุณภาพ": "quality",
+    "สำเร็จ": "success",
+    "ล้มเหลว": "failure",
+    "ผิดพลาด": "error",
+    "สมบูรณ์": "complete",
+    "รอดำเนินการ": "pending"
+  },
+  "chunk_count": 11,
+  "test_results": [
+    {
+      "query": "tbl_bot_rspn_sbmt_log มี column อะไรบ้าง",
+      "language": "Thai",
+      "results_found": 3,
+      "relevance_score": 0.009191096,
+      "success": true
+    },
+    {
+      "query": "tbl_bot_rspn_sbmt_log columns structure DataX_OPM_RDT_Submission_to_BOT_v1.0.docx",
+      "language": "English",
+      "results_found": 3,
+      "relevance_score": 0.006550213,
+      "success": true
+    },
+    {
+      "query": "LOG_ID SUBMISSION_ID RESPONSE_STATUS คือ column อะไร",
+      "language": "Mixed Thai-English",
+      "results_found": 3,
+      "relevance_score": 0.0050641387,
+      "success": true
+    },
+    {
+      "query": "ตาราง BOT response log structure",
+      "language": "Mixed Thai-English",
+      "results_found": 3,
+      "relevance_score": 0.0044824514,
+      "success": true
+    }
+  ],
+  "recommendations": {
+    "playground_setup": {
+      "index_name": "sandbox.rdt_knowledge.bilingual_translation_index_v1759213209",
+      "retrieval_columns": [
+        "combined_text",
+        "thai_text",
+        "english_text"
+      ],
+      "optimal_chunks": 3,
+      "temperature": 0.1
+    },
+    "query_optimization": {
+      "thai_queries": "Fully supported with bilingual responses",
+      "english_queries": "Enhanced with Thai context",
+      "mixed_queries": "Optimal performance with combined text search"
+    }
+  },
+  "created_at": "2025-09-30T13:21:17.485686"
+}

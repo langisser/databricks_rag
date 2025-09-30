@@ -1,0 +1,71 @@
+{
+  "analysis_date": "2025-09-30T12:21:25.458967",
+  "problem_identified": "Poor performance for table structure queries like 'tbl_bot_rspn_sbmt_log มี column อะไรบ้าง'",
+  "optimizations_applied": {
+    "table_focused_chunking": "Created specialized chunks for table structure information",
+    "semantic_chunking": "Enhanced chunks with keyword density optimization",
+    "specialized_indexes": [
+      "sandbox.rdt_knowledge.table_focused_index_v1759209612",
+      "sandbox.rdt_knowledge.semantic_focused_index_v1759209612"
+    ],
+    "llama4_maverick_config": {
+      "model_name": "Llama 4 Maverick",
+      "optimization_strategy": {
+        "chunk_size": "200-400 words for table structure queries",
+        "overlap": "50-100 words for context preservation",
+        "retrieval_count": "3-5 chunks for optimal context",
+        "temperature": "0.1-0.2 for factual responses",
+        "max_tokens": "500-1000 for detailed explanations"
+      },
+      "prompt_engineering": {
+        "table_structure_prompt": "You are a database expert assistant. When asked about table columns or structure, provide:\n1. Complete list of all columns\n2. Brief description of each column's purpose\n3. Data types where mentioned\n4. Primary/Foreign key relationships\n5. Thai and English explanations when applicable\n\nAlways format table information clearly and completely.",
+        "context_instructions": "Use the retrieved document chunks to provide comprehensive and accurate information about database tables, especially tbl_bot_rspn_sbmt_log structure and columns."
+      },
+      "retrieval_optimization": {
+        "embedding_strategy": "Use databricks-gte-large-en for multilingual support",
+        "chunk_selection": "Prioritize chunks with high keyword density for table queries",
+        "context_window": "Ensure table structure information is complete within chunk boundaries"
+      }
+    }
+  },
+  "performance_results": {
+    "sandbox.rdt_knowledge.table_focused_index_v1759209612": [
+      {
+        "query": "tbl_bot_rspn_sbmt_log มี column อะไรบ้าง",
+        "category": "Table Structure (Thai)",
+        "results_found": 3,
+        "relevance_score": 0.009419073,
+        "preview": "Purpose of tbl_bot_rspn_sbmt_log from RDT_Process_v2024.01_ปรับปรุง 15 มี.ค. 67.docx: ตารางนี้ใช้สำหรับเก็บบันทึกการตอบสนองจาก BOT หลังจากการส่งข้อมูล"
+      },
+      {
+        "query": "what columns does tbl_bot_rspn_sbmt_log have",
+        "category": "Table Structure (English)",
+        "results_found": 3,
+        "relevance_score": 0.006714974,
+        "preview": "Purpose of tbl_bot_rspn_sbmt_log from Design_presbmt.xlsx: ตารางนี้ใช้สำหรับเก็บบันทึกการตอบสนองจาก BOT หลังจากการส่งข้อมูลให้ BOT เพื่อติดตามสถานะและ"
+      },
+      {
+        "query": "LOG_ID SUBMISSION_ID RESPONSE_STATUS columns",
+        "category": "Specific Columns",
+        "results_found": 3,
+        "relevance_score": 0.0036843193,
+        "preview": "tbl_bot_rspn_sbmt_log columns from Submission view.xlsx: LOG_ID (Primary Key รหัสบันทึกการตอบสนอง), SUBMISSION_ID (Foreign Key รหัสการส่งข้อมูลที่เกี่"
+      },
+      {
+        "query": "BOT response submission log table structure",
+        "category": "Table Purpose",
+        "results_found": 3,
+        "relevance_score": 0.0041086213,
+        "preview": "tbl_bot_rspn_sbmt_log columns from Submission view.xlsx: LOG_ID (Primary Key รหัสบันทึกการตอบสนอง), SUBMISSION_ID (Foreign Key รหัสการส่งข้อมูลที่เกี่"
+      }
+    ],
+    "sandbox.rdt_knowledge.semantic_focused_index_v1759209612": []
+  },
+  "recommendations": [
+    "Use table-focused index for database structure queries",
+    "Implement Llama 4 Maverick configuration for better Thai language support",
+    "Adjust chunk retrieval count to 3-5 for optimal context",
+    "Use lower temperature (0.1-0.2) for factual database information",
+    "Ensure table structure information is complete within chunk boundaries"
+  ]
+}
