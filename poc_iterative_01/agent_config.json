@@ -5,7 +5,7 @@
     "knowledge_sources": [
       {
         "type": "vector_search_index",
-        "index_name": "sandbox.rdt_knowledge.rag_chunk_index",
+        "index_name": "sandbox.rdt_knowledge.full_content_rag_index",
         "columns": [
           "chunk_text",
           "document_id"
@@ -21,62 +21,64 @@
   },
   "test_queries": [
     {
-      "query": "What is the company's remote work policy?",
+      "query": "What are the Bank of Thailand data submission requirements?",
       "expected_keywords": [
-        "remote work",
-        "policy",
-        "employees",
-        "days per week"
+        "Bank of Thailand",
+        "BOT",
+        "data submission",
+        "requirements"
       ],
-      "category": "HR Policy"
+      "category": "Regulatory Compliance"
     },
     {
-      "query": "How do I reset my password?",
+      "query": "How does counterparty risk management work?",
       "expected_keywords": [
-        "password",
-        "reset",
-        "settings"
+        "counterparty",
+        "risk management",
+        "procedures"
       ],
-      "category": "IT Support"
+      "category": "Risk Management"
     },
     {
-      "query": "What are the Databricks setup requirements?",
+      "query": "What are the data validation rules and processes?",
       "expected_keywords": [
-        "databricks",
-        "setup",
-        "requirements",
-        "install"
+        "data validation",
+        "rules",
+        "processes",
+        "validation"
       ],
-      "category": "Technical Setup"
+      "category": "Data Quality"
     },
     {
-      "query": "What employee benefits are available?",
+      "query": "What is the cross validation process for IWT and PROD environments?",
       "expected_keywords": [
-        "benefits",
-        "employee"
+        "cross validation",
+        "IWT",
+        "PROD",
+        "environment"
       ],
-      "category": "HR Benefits"
+      "category": "Environment Management"
     },
     {
-      "query": "How do I submit a help desk ticket?",
+      "query": "What data entities and elements need to be submitted?",
       "expected_keywords": [
-        "help desk",
-        "ticket",
-        "submit"
+        "data entities",
+        "elements",
+        "submission"
       ],
-      "category": "IT Support"
+      "category": "Data Management"
     }
   ],
   "vector_search": {
     "endpoint": "rag-knowledge-base-endpoint",
-    "index": "sandbox.rdt_knowledge.rag_chunk_index",
+    "index": "sandbox.rdt_knowledge.full_content_rag_index",
     "namespace": "sandbox.rdt_knowledge"
   },
   "setup_instructions": [
     "1. Navigate to AI Playground in Databricks workspace",
     "2. Click 'Create Agent' or 'New Assistant'",
     "3. Choose 'Knowledge Assistant' template",
-    "4. Connect vector search index: sandbox.rdt_knowledge.rag_chunk_index",
+    "4. Connect vector search index: sandbox.rdt_knowledge.full_content_rag_index",
     "5. Configure agent instructions and model settings",
     "6. Test with provided evaluation queries",
     "7. Deploy agent endpoint for production use"

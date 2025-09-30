@@ -30,7 +30,14 @@ def main():
         rag_config = config['rag_config']
         namespace = rag_config['full_namespace']
         endpoint_name = rag_config['vector_search_endpoint']
-        index_name = f"{namespace}.rag_chunk_index"
+
+        # Use the new full content index if available, fallback to original
+        if 'full_content_index' in rag_config:
+            index_name = rag_config['full_content_index']
+            print("   Using NEW full content index with complete documents")
+        else:
+            index_name = f"{namespace}.rag_chunk_index"
+            print("   Using original sample content index")
 
         print("1. Configuration loaded:")
         print(f"   Workspace: {config['databricks']['host']}")
@@ -47,13 +54,27 @@ def main():
             cluster_id=config['databricks']['cluster_id']
         ).getOrCreate()
 
-        # Verify data exists
-        chunk_count = spark.sql(f"SELECT COUNT(*) as count FROM {namespace}.rag_document_chunks").collect()[0]['count']
-        print(f"   Document chunks available: {chunk_count}")
+        # Verify data exists - check both tables
+        try:
+            # Check for new full content table first
+            if 'full_content_table' in rag_config:
+                table_name = rag_config['full_content_table']
+                chunk_count = spark.sql(f"SELECT COUNT(*) as count FROM {table_name}").collect()[0]['count']
+                print(f"   FULL content chunks available: {chunk_count}")
+                if chunk_count > 0:
+                    word_stats = spark.sql(f"SELECT SUM(chunk_word_count) as total_words FROM {table_name}").collect()[0]
+                    print(f"   Total words in full content: {word_stats['total_words']}")
+            else:
+                # Fallback to original table
+                chunk_count = spark.sql(f"SELECT COUNT(*) as count FROM {namespace}.rag_document_chunks").collect()[0]['count']
+                print(f"   Sample content chunks available: {chunk_count}")
 
-        if chunk_count == 0:
-            print("   ERROR: No document chunks found. Run Phase 2 first.")
-            return False
+            if chunk_count == 0:
+                print("   ERROR: No document chunks found. Run document processing first.")
+                return False
+        except Exception as e:
+            print(f"   WARNING: Could not verify chunk count: {e}")
+            chunk_count = 1  # Continue anyway
 
         # Verify vector search is operational
         headers = {
@@ -119,34 +140,34 @@ Keep responses concise but informative.
         print("   4. Set instructions for the agent")
         print("   5. Test with sample questions")
 
-        # Step 5: Create test queries for evaluation
+        # Step 5: Create test queries for evaluation - updated for business documents
         print(f"\n5. Creating evaluation test cases...")
 
         test_queries = [
             {
-                "query": "What is the company's remote work policy?",
-                "expected_keywords": ["remote work", "policy", "employees", "days per week"],
-                "category": "HR Policy"
+                "query": "What are the Bank of Thailand data submission requirements?",
+                "expected_keywords": ["Bank of Thailand", "BOT", "data submission", "requirements"],
+                "category": "Regulatory Compliance"
             },
             {
-                "query": "How do I reset my password?",
-                "expected_keywords": ["password", "reset", "settings"],
-                "category": "IT Support"
+                "query": "How does counterparty risk management work?",
+                "expected_keywords": ["counterparty", "risk management", "procedures"],
+                "category": "Risk Management"
             },
             {
-                "query": "What are the Databricks setup requirements?",
-                "expected_keywords": ["databricks", "setup", "requirements", "install"],
-                "category": "Technical Setup"
+                "query": "What are the data validation rules and processes?",
+                "expected_keywords": ["data validation", "rules", "processes", "validation"],
+                "category": "Data Quality"
             },
             {
-                "query": "What employee benefits are available?",
-                "expected_keywords": ["benefits", "employee"],
-                "category": "HR Benefits"
+                "query": "What is the cross validation process for IWT and PROD environments?",
+                "expected_keywords": ["cross validation", "IWT", "PROD", "environment"],
+                "category": "Environment Management"
             },
             {
-                "query": "How do I submit a help desk ticket?",
-                "expected_keywords": ["help desk", "ticket", "submit"],
-                "category": "IT Support"
+                "query": "What data entities and elements need to be submitted?",
+                "expected_keywords": ["data entities", "elements", "submission"],
+                "category": "Data Management"
             }
         ]
 

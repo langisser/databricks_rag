@@ -1,2 +1,3 @@
 - using text status instead of emoji to prevent error charmap
 - for one time script or investigate or validation that not intend to re-use then create in tmp folder
+- if found error relate to cluster or execute timeout then check status first to confirm cluster is ready to use or just a starting
