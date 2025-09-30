@@ -4,3 +4,5 @@ https://docs.databricks.com/aws/en/generative-ai/tutorials/ai-cookbook/evaluate-
 https://docs.databricks.com/aws/en/generative-ai/vector-search
 https://docs.databricks.com/aws/en/generative-ai/tutorials/ai-cookbook/quality-data-pipeline-rag
 https://docs.databricks.com/aws/en/notebooks/source/generative-ai/unstructured-data-pipeline.html
+https://docs.databricks.com/aws/en/large-language-models/ai-playground
+https://docs.databricks.com/aws/en/generative-ai/agent-framework/ai-playground-agent
