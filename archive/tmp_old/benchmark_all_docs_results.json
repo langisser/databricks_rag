@@ -1,0 +1,50 @@
+{
+  "index": "sandbox.rdt_knowledge.all_documents_index",
+  "summary": {
+    "avg_latency_ms": 0.0,
+    "avg_recall_3": 0.0,
+    "avg_precision_3": 0.0
+  },
+  "queries": [
+    {
+      "query": "tbl_bot_rspn_sbmt_log มี column อะไรบ้าง",
+      "num_results": 0,
+      "latency_ms": 0.0,
+      "recall_3": 0.0,
+      "precision_3": 0.0,
+      "top_score": 0.0
+    },
+    {
+      "query": "tbl_bot_rspn_sbmt_log columns structure",
+      "num_results": 0,
+      "latency_ms": 0.0,
+      "recall_3": 0.0,
+      "precision_3": 0.0,
+      "top_score": 0.0
+    },
+    {
+      "query": "LOG_ID SUBMISSION_ID RESPONSE_STATUS คือ column อะไร",
+      "num_results": 0,
+      "latency_ms": 0.0,
+      "recall_3": 0.0,
+      "precision_3": 0.0,
+      "top_score": 0.0
+    },
+    {
+      "query": "ตาราง BOT response log structure",
+      "num_results": 0,
+      "latency_ms": 0.0,
+      "recall_3": 0.0,
+      "precision_3": 0.0,
+      "top_score": 0.0
+    },
+    {
+      "query": "DataX OPM RDT Submission to BOT",
+      "num_results": 0,
+      "latency_ms": 0.0,
+      "recall_3": 0.0,
+      "precision_3": 0.0,
+      "top_score": 0.0
+    }
+  ]
+}

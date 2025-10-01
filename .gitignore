@@ -1,4 +1,6 @@
+# Claude Code settings
 .claude/settings.local.json
+.claude/agents/
 
 # Sensitive configuration files
 databricks_helper/databricks_config/config.json
@@ -6,3 +8,40 @@ databricks_helper/databricks_config/config.json
 # Temporary directories for HTML exports and processing
 tmp/
 databricks_helper/tmp/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+.directory
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test outputs and temp files
+*.tmp
+test_output/
+benchmark_results/

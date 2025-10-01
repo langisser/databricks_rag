@@ -1,0 +1,64 @@
+{
+  "index_name": "sandbox.rdt_knowledge.poc03_multimodal_rag_index",
+  "timestamp": "2025-10-01T00:18:14",
+  "summary": {
+    "total_queries": 5,
+    "avg_latency_ms": 1214.3596172332764,
+    "avg_recall_3": 0.37,
+    "avg_precision_3": 0.6
+  },
+  "latency_stats": {
+    "avg_ms": 1214.3596172332764,
+    "p50_ms": 995.7852363586426,
+    "p95_ms": 1982.1052551269531,
+    "min_ms": 981.7774295806885,
+    "max_ms": 1982.1052551269531
+  },
+  "queries": [
+    {
+      "query": "tbl_bot_rspn_sbmt_log มี column อะไรบ้าง",
+      "language": "Thai",
+      "num_results": 10,
+      "latency_ms": 1982.1052551269531,
+      "top_score": 0.008754067,
+      "recall_3": 0.2,
+      "precision_3": 0.3333333333333333
+    },
+    {
+      "query": "tbl_bot_rspn_sbmt_log columns structure",
+      "language": "English",
+      "num_results": 10,
+      "latency_ms": 995.7852363586426,
+      "top_score": 0.0075570475,
+      "recall_3": 0.2,
+      "precision_3": 0.3333333333333333
+    },
+    {
+      "query": "LOG_ID SUBMISSION_ID RESPONSE_STATUS คือ column อะไร",
+      "language": "Mixed",
+      "num_results": 10,
+      "latency_ms": 986.0169887542725,
+      "top_score": 0.0027166298,
+      "recall_3": 0.25,
+      "precision_3": 0.3333333333333333
+    },
+    {
+      "query": "ตาราง BOT response log structure",
+      "language": "Mixed",
+      "num_results": 10,
+      "latency_ms": 981.7774295806885,
+      "top_score": 0.0030751484,
+      "recall_3": 0.6,
+      "precision_3": 1.0
+    },
+    {
+      "query": "DataX OPM RDT Submission to BOT",
+      "language": "English",
+      "num_results": 10,
+      "latency_ms": 1126.1131763458252,
+      "top_score": 0.003880852,
+      "recall_3": 0.6,
+      "precision_3": 1.0
+    }
+  ]
+}

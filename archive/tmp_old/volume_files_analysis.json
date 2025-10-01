@@ -1,0 +1,100 @@
+{
+  "total_files": 24,
+  "total_size_mb": 107.18,
+  "file_types": {
+    ".pptx": 2,
+    ".docx": 17,
+    ".xlsx": 3,
+    ".drawio": 1,
+    ".pdf": 1
+  },
+  "files_by_type": {
+    ".pptx": [
+      "CardX-RDT-Platform V 2.0.pptx",
+      "RDT Data Platform Schema sync to DI v1.0.pptx"
+    ],
+    ".docx": [
+      "Counterparty_v2025.01.docx",
+      "DataX_OPM_RDT_Process_Batch_Framework_v1.0.docx",
+      "DataX_OPM_RDT_Process_Batch_Framework_v1.01.docx",
+      "DataX_OPM_RDT_Submission_to_BOT_v1.0.docx",
+      "DataX_OPM_RDT_Submission_to_BOT_v1.01.docx",
+      "RDT_DataX_BOT Validation_Framework_Guidelines_v1.0.docx",
+      "RDT_DataX_BOT Validation_Framework_Guidelines_v1.01.docx",
+      "RDT_DataX_Housekeeping_Framework_Guidelines_v1.0.docx",
+      "RDT_DataX_Operation_Report_Framework_Guidelines_v1.0.docx",
+      "RDT_DataX_Presubmission_Framework_Guidelines_v1.0.docx",
+      "RDT_DataX_Schema sync from Datalake_Framework_Guidelines_v1.0.docx",
+      "RDT_DataX_Schema sync to RDT-Office_Framework_Guidelines_v1.0.docx",
+      "RDT_DataX_Transform - Data Quality_Framework_Guidelines_v1.0.docx",
+      "RDT_Process_v2024.01_ปรับปรุง 15 มี.ค. 67.docx",
+      "RDT_Process_v2025.01.docx",
+      "RDT_Validation_v2024.03.docx",
+      "SCB_RDT_Standard Development Guideline_v0.00.03.docx"
+    ],
+    ".xlsx": [
+      "CrossvalidationGroupIWTandPROD.xlsx",
+      "Design_presbmt.xlsx",
+      "Submission view.xlsx"
+    ],
+    ".drawio": [
+      "RDT_Diagram.drawio"
+    ],
+    ".pdf": [
+      "เอกสารคู่มือ DAP API Specification V1.4.pdf"
+    ]
+  },
+  "extraction_strategy": {
+    ".docx": {
+      "library": "python-docx",
+      "extract": [
+        "text",
+        "tables",
+        "images"
+      ],
+      "features": "Paragraphs, section headers, table structure, inline images"
+    },
+    ".xlsx": {
+      "library": "openpyxl, pandas",
+      "extract": [
+        "text",
+        "tables",
+        "formulas"
+      ],
+      "features": "Multiple sheets, cell values, formulas, charts metadata"
+    },
+    ".pdf": {
+      "library": "pdfplumber, PyPDF2",
+      "extract": [
+        "text",
+        "tables",
+        "images"
+      ],
+      "features": "Text extraction, table detection, image extraction, OCR if needed"
+    },
+    ".pptx": {
+      "library": "python-pptx",
+      "extract": [
+        "text",
+        "images",
+        "notes"
+      ],
+      "features": "Slides, text boxes, images, speaker notes"
+    },
+    ".drawio": {
+      "library": "xml.etree, custom parser",
+      "extract": [
+        "text",
+        "diagrams"
+      ],
+      "features": "Multiple tabs/pages, diagram structure, text labels"
+    },
+    ".txt": {
+      "library": "built-in",
+      "extract": [
+        "text"
+      ],
+      "features": "Plain text content"
+    }
+  }
+}

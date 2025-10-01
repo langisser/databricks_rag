@@ -1,0 +1,174 @@
+{
+  "index_name": "sandbox.rdt_knowledge.bilingual_translation_index_v1759213209",
+  "total_queries": 5,
+  "k_values": [
+    3,
+    5,
+    10
+  ],
+  "query_results": [
+    {
+      "query": "tbl_bot_rspn_sbmt_log มี column อะไรบ้าง",
+      "language": "Thai",
+      "category": "table_structure",
+      "latency_ms": 2847.3105430603027,
+      "num_results": 0,
+      "metrics_by_k": {
+        "3": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "5": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "10": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        }
+      }
+    },
+    {
+      "query": "tbl_bot_rspn_sbmt_log columns structure",
+      "language": "English",
+      "category": "table_structure",
+      "latency_ms": 900.8946418762207,
+      "num_results": 0,
+      "metrics_by_k": {
+        "3": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "5": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "10": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        }
+      }
+    },
+    {
+      "query": "LOG_ID SUBMISSION_ID RESPONSE_STATUS คือ column อะไร",
+      "language": "Mixed",
+      "category": "column_definition",
+      "latency_ms": 1988.0053997039795,
+      "num_results": 0,
+      "metrics_by_k": {
+        "3": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "5": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "10": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        }
+      }
+    },
+    {
+      "query": "ตาราง BOT response log structure",
+      "language": "Mixed",
+      "category": "table_structure",
+      "latency_ms": 989.5780086517334,
+      "num_results": 0,
+      "metrics_by_k": {
+        "3": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "5": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "10": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        }
+      }
+    },
+    {
+      "query": "DataX OPM RDT Submission to BOT",
+      "language": "English",
+      "category": "document",
+      "latency_ms": 1017.0347690582275,
+      "num_results": 0,
+      "metrics_by_k": {
+        "3": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "5": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        },
+        "10": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "ndcg": 0.0,
+          "mrr": 0.0
+        }
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "@3": {
+      "avg_recall": 0.0,
+      "avg_precision": 0.0,
+      "avg_ndcg": 0.0,
+      "avg_mrr": 0.0
+    },
+    "@5": {
+      "avg_recall": 0.0,
+      "avg_precision": 0.0,
+      "avg_ndcg": 0.0,
+      "avg_mrr": 0.0
+    },
+    "@10": {
+      "avg_recall": 0.0,
+      "avg_precision": 0.0,
+      "avg_ndcg": 0.0,
+      "avg_mrr": 0.0
+    }
+  },
+  "latency_stats": {
+    "avg_ms": 1548.5646724700928,
+    "p50_ms": 1017.0347690582275,
+    "p95_ms": 2847.3105430603027,
+    "p99_ms": 2847.3105430603027,
+    "min_ms": 900.8946418762207,
+    "max_ms": 2847.3105430603027
+  }
+}

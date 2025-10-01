@@ -13,7 +13,20 @@
       "Bash(python:*)",
       "Bash(pip install:*)",
       "Bash(git checkout:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(claude --version)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm install:*)",
+      "Bash(git log:*)",
+      "Bash(git tag:*)",
+      "WebSearch",
+      "Bash(databricks_helper/databricks_cli/databricks fs ls dbfs:/Volumes/sandbox/rdt_knowledge/rdt_document)",
+      "Read(//c/Users/KHACHORNPOPWONGPHAKA/**)",
+      "Bash(git push:*)",
+      "Bash(timeout 1800 python 06_process_all_formats_v02.py)",
+      "Bash(./databricks clusters list --output json)",
+      "Bash(git mv:*)",
+      "Bash(tree:*)"
     ],
     "deny": [],
     "ask": []

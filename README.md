@@ -1,107 +1,61 @@
-# Databricks RAG Knowledge Base
+# Databricks RAG Knowledge Base System
 
-A comprehensive RAG (Retrieval-Augmented Generation) application built for Databricks with integrated helper functions for HTML export and command execution via Databricks Connect.
+Production-ready multi-format RAG (Retrieval-Augmented Generation) system on Databricks with hybrid vector search, metadata filtering, and bilingual support.
+
+## Quick Start
+
+```bash
+# 1. Configure
+cd databricks_helper/databricks_config
+# Edit config.json with your credentials
+
+# 2. Upload documents
+cd ../../production/data_processing
+python upload_to_volume.py
+
+# 3. Process & create index
+python process_documents.py
+python add_metadata.py
+cd ../vector_index
+python create_index.py
+
+# 4. Monitor & benchmark
+python check_status.py
+python benchmark.py
+```
 
 ## Project Structure
 
 ```
 databricks_rag/
-├── planning/                      # Implementation plans and documentation
-│   └── plan_version_01.md        # Comprehensive implementation plan v1.0
-├── databricks_helper/             # Submodule for Databricks utilities
-│   ├── helper_function/           # Core helper functions
-│   │   ├── databricks_helper.py            # Main helper module
-│   │   ├── databricks_html_log_export.py   # HTML log export functionality
-│   │   └── demo/                           # Demo and example scripts
-│   ├── databricks_config/         # Configuration management
-│   └── databricks_cli/            # CLI tools
-├── .gitmodules                   # Git submodule configuration
-└── README.md                     # This file
+├── production/              # Production scripts (use these!)
+│   ├── data_processing/    # Document processing
+│   └── vector_index/       # Index management
+├── utilities/              # Helper utilities
+├── archive/                # Historical POCs (reference only)
+├── docs/                   # Documentation
+└── databricks_helper/      # Config & helpers
 ```
 
-## Features
+## Current Performance
 
-### RAG Knowledge Base
-- **Vector Search Integration**: Databricks Vector Search for document indexing
-- **AI Playground Integration**: No-code chatbot creation via Databricks Playground
-- **Document Processing**: Support for PDFs, text files, and unstructured data
-- **Citation Support**: Automatic source citation in responses
-- **Real-time Updates**: Automatic index updates when documents change
-
-### Databricks Helper Integration
-- **HTML Log Export**: Export Databricks job run logs in HTML format
-- **Live Execution**: Real-time SQL query and notebook execution
-- **Databricks Connect**: Direct cluster connection for immediate results
-- **Output Capture**: Structured JSON results with stdout/stderr capture
-- **Configuration Management**: Secure credential handling
-
-## Quick Start
-
-### 1. Clone with Submodules
-```bash
-git clone --recursive https://github.com/langisser/databricks_rag.git
-cd databricks_rag
-```
-
-### 2. Initialize Submodule (if not cloned with --recursive)
-```bash
-git submodule update --init --recursive
-```
-
-### 3. Setup Databricks Helper
-```bash
-cd databricks_helper/databricks_config
-python setup_config.py
-# Edit config.json with your Databricks credentials
-```
-
-### 4. Follow Implementation Plan
-See `planning/plan_version_01.md` for detailed step-by-step implementation guide.
-
-## Implementation Timeline
-
-- **Phase 1**: Environment Setup (Day 1)
-- **Phase 2**: Data Preparation (Day 1-2)
-- **Phase 3**: Vector Search Implementation (Day 2-3)
-- **Phase 4**: RAG Chain Development (Day 3)
-- **Phase 5**: AI Playground Integration (Day 4)
-- **Phase 6**: Evaluation and Monitoring (Day 4-5)
-
-## Prerequisites
-
-- Databricks workspace with Unity Catalog enabled
-- Serverless compute configured
-- Personal access tokens for authentication
-- Sample documents for knowledge base
-
-## Usage Examples
-
-### HTML Log Export
-```python
-from databricks_helper.helper_function.databricks_html_log_export import export_html_log
-html_file = export_html_log("run_id_123")
-```
-
-### Live SQL Execution
-```python
-from databricks_helper.helper_function.databricks_helper import execute_sql_query
-result = execute_sql_query("SELECT COUNT(*) FROM my_table")
-print(result['result'])
-```
+**POC05_v02 All Formats**:
+- 28,823 chunks from 114 documents
+- 779ms average latency
+- 100% success rate
+- Supports: docx, pdf, xlsx
 
 ## Documentation
 
-- **Implementation Plan**: `planning/plan_version_01.md` - Complete implementation guide
-- **Databricks Helper**: `databricks_helper/helper_function/README.md` - Helper function documentation
-- **Configuration**: `databricks_helper/CLAUDE.md` - Setup and usage guidance
+- **Production Guide**: `production/README.md`
+- **Cleanup Plan**: `poc_iterative_06/CLEANUP_PLAN.md`
+- **Architecture**: `docs/ARCHITECTURE.md` (coming soon)
 
-## Contributing
+## Evolution
 
-1. Update implementation plan versions when making architectural changes
-2. Maintain submodule synchronization when updating databricks_helper
-3. Follow security best practices for credential management
-4. Document all new features in the appropriate plan version
+POC01 → POC02 → POC03 → POC04 → **POC05** (current) → POC06 (cleanup)
 
-## License
+See `archive/` for historical implementations.
 
-This project integrates multiple components with their respective licenses.
+---
+Last Updated: 2025-10-01 | Status: Production Ready

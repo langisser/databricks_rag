@@ -1,0 +1,122 @@
+[
+  {
+    "id": "datax_img_0",
+    "content": "IMAGE 1\nFormat: PNG\nSize: 242,655 bytes\nDimensions: 2657x1502px\nAspect ratio: 1.77\nType: Architecture Diagram / System Overview",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 242655,
+    "image_width": 2657,
+    "image_height": 1502,
+    "char_count": 127
+  },
+  {
+    "id": "datax_img_1",
+    "content": "IMAGE 2\nFormat: PNG\nSize: 123,297 bytes\nDimensions: 1430x1215px\nAspect ratio: 1.18\nType: Architecture Diagram / System Overview",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 123297,
+    "image_width": 1430,
+    "image_height": 1215,
+    "char_count": 127
+  },
+  {
+    "id": "datax_img_2",
+    "content": "IMAGE 3\nFormat: PNG\nSize: 60,142 bytes\nDimensions: 1431x640px\nAspect ratio: 2.24\nType: Process Flow Diagram / Horizontal Flowchart",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 60142,
+    "image_width": 1431,
+    "image_height": 640,
+    "char_count": 130
+  },
+  {
+    "id": "datax_img_3",
+    "content": "IMAGE 4\nFormat: PNG\nSize: 145,626 bytes\nDimensions: 1430x1449px\nAspect ratio: 0.99\nType: Architecture Diagram / System Overview",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 145626,
+    "image_width": 1430,
+    "image_height": 1449,
+    "char_count": 127
+  },
+  {
+    "id": "datax_img_4",
+    "content": "IMAGE 5\nFormat: PNG\nSize: 144,288 bytes\nDimensions: 1429x1719px\nAspect ratio: 0.83\nType: Architecture Diagram / System Overview",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 144288,
+    "image_width": 1429,
+    "image_height": 1719,
+    "char_count": 127
+  },
+  {
+    "id": "datax_img_5",
+    "content": "IMAGE 6\nFormat: PNG\nSize: 123,240 bytes\nDimensions: 1429x1161px\nAspect ratio: 1.23\nType: Architecture Diagram / System Overview",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 123240,
+    "image_width": 1429,
+    "image_height": 1161,
+    "char_count": 127
+  },
+  {
+    "id": "datax_img_6",
+    "content": "IMAGE 7\nFormat: PNG\nSize: 49,504 bytes\nDimensions: 1430x651px\nAspect ratio: 2.2\nType: Process Flow Diagram / Horizontal Flowchart",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 49504,
+    "image_width": 1430,
+    "image_height": 651,
+    "char_count": 129
+  },
+  {
+    "id": "datax_img_7",
+    "content": "IMAGE 8\nFormat: PNG\nSize: 139,156 bytes\nDimensions: 1431x1220px\nAspect ratio: 1.17\nType: Architecture Diagram / System Overview",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 139156,
+    "image_width": 1431,
+    "image_height": 1220,
+    "char_count": 127
+  },
+  {
+    "id": "datax_img_8",
+    "content": "IMAGE 9\nFormat: PNG\nSize: 26,058 bytes\nDimensions: 682x454px\nAspect ratio: 1.5\nType: Diagram / Flowchart",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 26058,
+    "image_width": 682,
+    "image_height": 454,
+    "char_count": 104
+  },
+  {
+    "id": "datax_img_9",
+    "content": "IMAGE 10\nFormat: PNG\nSize: 55,268 bytes\nDimensions: 1282x325px\nAspect ratio: 3.94\nType: Process Flow Diagram / Horizontal Flowchart",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 55268,
+    "image_width": 1282,
+    "image_height": 325,
+    "char_count": 131
+  },
+  {
+    "id": "datax_img_10",
+    "content": "IMAGE 11\nFormat: PNG\nSize: 849,061 bytes\nDimensions: 1788x313px\nAspect ratio: 5.71\nType: Process Flow Diagram / Horizontal Flowchart",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 849061,
+    "image_width": 1788,
+    "image_height": 313,
+    "char_count": 132
+  },
+  {
+    "id": "datax_img_11",
+    "content": "IMAGE 12\nFormat: PNG\nSize: 475,467 bytes\nDimensions: 898x313px\nAspect ratio: 2.87\nType: Process Flow Diagram / Horizontal Flowchart",
+    "content_type": "image_visual",
+    "image_format": "png",
+    "image_size": 475467,
+    "image_width": 898,
+    "image_height": 313,
+    "char_count": 131
+  }
+]

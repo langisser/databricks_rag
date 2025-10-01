@@ -1,0 +1,84 @@
+{
+  "agent_config": {
+    "name": "RAG Knowledge Assistant",
+    "description": "A knowledge assistant that answers questions using company documents and policies",
+    "knowledge_sources": [
+      {
+        "type": "vector_search_index",
+        "index_name": "sandbox.rdt_knowledge.rag_chunk_index",
+        "columns": [
+          "chunk_text",
+          "document_id"
+        ]
+      }
+    ],
+    "instructions": "You are a helpful AI assistant that answers questions based on company documents and policies.\nAlways provide accurate information and cite your sources. If you don't know something, say so clearly.\nKeep responses concise but informative.",
+    "model_config": {
+      "foundation_model": "databricks-dbrx-instruct",
+      "temperature": 0.1,
+      "max_tokens": 500
+    }
+  },
+  "test_queries": [
+    {
+      "query": "What is the company's remote work policy?",
+      "expected_keywords": [
+        "remote work",
+        "policy",
+        "employees",
+        "days per week"
+      ],
+      "category": "HR Policy"
+    },
+    {
+      "query": "How do I reset my password?",
+      "expected_keywords": [
+        "password",
+        "reset",
+        "settings"
+      ],
+      "category": "IT Support"
+    },
+    {
+      "query": "What are the Databricks setup requirements?",
+      "expected_keywords": [
+        "databricks",
+        "setup",
+        "requirements",
+        "install"
+      ],
+      "category": "Technical Setup"
+    },
+    {
+      "query": "What employee benefits are available?",
+      "expected_keywords": [
+        "benefits",
+        "employee"
+      ],
+      "category": "HR Benefits"
+    },
+    {
+      "query": "How do I submit a help desk ticket?",
+      "expected_keywords": [
+        "help desk",
+        "ticket",
+        "submit"
+      ],
+      "category": "IT Support"
+    }
+  ],
+  "vector_search": {
+    "endpoint": "rag-knowledge-base-endpoint",
+    "index": "sandbox.rdt_knowledge.rag_chunk_index",
+    "namespace": "sandbox.rdt_knowledge"
+  },
+  "setup_instructions": [
+    "1. Navigate to AI Playground in Databricks workspace",
+    "2. Click 'Create Agent' or 'New Assistant'",
+    "3. Choose 'Knowledge Assistant' template",
+    "4. Connect vector search index: sandbox.rdt_knowledge.rag_chunk_index",
+    "5. Configure agent instructions and model settings",
+    "6. Test with provided evaluation queries",
+    "7. Deploy agent endpoint for production use"
+  ]
+}

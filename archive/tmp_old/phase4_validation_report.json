@@ -1,0 +1,88 @@
+{
+  "timestamp": "2025-09-30 08:58:36",
+  "agent_config": "RAG Knowledge Assistant",
+  "vector_index": "sandbox.rdt_knowledge.rag_chunk_index",
+  "test_summary": {
+    "total_tests": 5,
+    "passed": 4,
+    "failed": 1,
+    "success_rate": 0.8,
+    "average_relevance": 0.65
+  },
+  "test_results": [
+    {
+      "query": "What is the company's remote work policy?",
+      "category": "HR Policy",
+      "found_results": 3,
+      "similarity_score": "rag_doc_001",
+      "relevance_score": 1.0,
+      "found_keywords": [
+        "remote work",
+        "policy",
+        "employees",
+        "days per week"
+      ],
+      "chunk_preview": "Company Remote Work Policy: All employees are eligible for remote work up to 3 days per week.",
+      "status": "PASS"
+    },
+    {
+      "query": "How do I reset my password?",
+      "category": "IT Support",
+      "found_results": 3,
+      "similarity_score": "rag_doc_002",
+      "relevance_score": 1.0,
+      "found_keywords": [
+        "password",
+        "reset",
+        "settings"
+      ],
+      "chunk_preview": "FAQ: How to reset password? Go to Settings and click Reset Password.",
+      "status": "PASS"
+    },
+    {
+      "query": "What are the Databricks setup requirements?",
+      "category": "Technical Setup",
+      "found_results": 3,
+      "similarity_score": "rag_doc_003",
+      "relevance_score": 0.75,
+      "found_keywords": [
+        "databricks",
+        "setup",
+        "install"
+      ],
+      "chunk_preview": "Databricks RAG Setup: Install databricks-vectorsearch and configure Unity Catalog.",
+      "status": "PASS"
+    },
+    {
+      "query": "What employee benefits are available?",
+      "category": "HR Benefits",
+      "found_results": 3,
+      "similarity_score": "rag_doc_001",
+      "relevance_score": 0.5,
+      "found_keywords": [
+        "employee"
+      ],
+      "chunk_preview": "Company Remote Work Policy: All employees are eligible for remote work up to 3 days per week.",
+      "status": "PASS"
+    },
+    {
+      "query": "How do I submit a help desk ticket?",
+      "category": "IT Support",
+      "found_results": 3,
+      "similarity_score": "rag_doc_002",
+      "relevance_score": 0.0,
+      "found_keywords": [],
+      "chunk_preview": "FAQ: How to reset password? Go to Settings and click Reset Password.",
+      "status": "FAIL"
+    }
+  ],
+  "readiness_checks": {
+    "Vector Search Operational": true,
+    "High Relevance Score": true,
+    "Configuration Complete": true,
+    "Test Categories Coverage": true,
+    "High Success Rate": true
+  },
+  "overall_status": "READY",
+  "recommendations": []
+}

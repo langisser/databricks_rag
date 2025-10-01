@@ -14,14 +14,14 @@
       "poc03": {
         "recall": 0.2,
         "precision": 0.3333333333333333,
-        "latency_ms": 2897.996664047241,
+        "latency_ms": 1888.1785869598389,
         "results_count": 10,
         "top_score": 0.008754067
       },
       "poc04": {
         "recall": 0.2,
         "precision": 0.3333333333333333,
-        "latency_ms": 1298.2258796691895,
+        "latency_ms": 1013.2224559783936,
         "results_count": 10,
         "top_score": 0.0063669146
       },
@@ -36,14 +36,14 @@
       "poc03": {
         "recall": 0.2,
         "precision": 0.3333333333333333,
-        "latency_ms": 1345.9815979003906,
+        "latency_ms": 987.0169162750244,
         "results_count": 10,
         "top_score": 0.0075570475
       },
       "poc04": {
         "recall": 0.2,
         "precision": 0.3333333333333333,
-        "latency_ms": 1022.1431255340576,
+        "latency_ms": 1039.0517711639404,
         "results_count": 10,
         "top_score": 0.0045193615
       },
@@ -58,16 +58,16 @@
       "poc03": {
         "recall": 0.25,
         "precision": 0.3333333333333333,
-        "latency_ms": 981.1933040618896,
+        "latency_ms": 1003.3555030822754,
         "results_count": 10,
         "top_score": 0.002716509
       },
       "poc04": {
         "recall": 0.0,
         "precision": 0.0,
-        "latency_ms": 999.9005794525146,
+        "latency_ms": 996.2430000305176,
         "results_count": 10,
-        "top_score": 0.0029293885
+        "top_score": 0.0029296768
       },
       "improvement": {
         "recall_pct": -99.60159362549801,
@@ -80,16 +80,16 @@
       "poc03": {
         "recall": 0.6,
         "precision": 1.0,
-        "latency_ms": 998.1884956359863,
+        "latency_ms": 955.9974670410156,
         "results_count": 10,
         "top_score": 0.0030751484
       },
       "poc04": {
         "recall": 0.6,
         "precision": 1.0,
-        "latency_ms": 1005.0148963928223,
+        "latency_ms": 1107.6383590698242,
         "results_count": 10,
-        "top_score": 0.0033683695
+        "top_score": 0.003368419
       },
       "improvement": {
         "recall_pct": 0.0,
@@ -102,14 +102,14 @@
       "poc03": {
         "recall": 0.6,
         "precision": 1.0,
-        "latency_ms": 958.9691162109375,
+        "latency_ms": 978.1339168548584,
         "results_count": 10,
         "top_score": 0.003880852
       },
       "poc04": {
         "recall": 0.6,
         "precision": 1.0,
-        "latency_ms": 960.0868225097656,
+        "latency_ms": 964.5206928253174,
         "results_count": 10,
         "top_score": 0.005346026
       },
