@@ -1,5 +1,8 @@
 .claude/settings.local.json
 
+# Sensitive configuration files
+databricks_helper/databricks_config/config.json
+
 # Temporary directories for HTML exports and processing
 tmp/
 databricks_helper/tmp/
