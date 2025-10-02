@@ -26,7 +26,8 @@
       "Bash(timeout 1800 python 06_process_all_formats_v02.py)",
       "Bash(./databricks clusters list --output json)",
       "Bash(git mv:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(timeout 1800 python 01_process_with_improved_chunking.py)"
     ],
     "deny": [],
     "ask": []
